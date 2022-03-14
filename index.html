@@ -1,0 +1,78 @@
+
+<!-- Mirrored from imxbears.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Oct 2021 02:43:18 GMT -->
+<head>
+<title>Nudie Community Public Mint</title>
+<link rel="shortcut icon" type="image/jpg" href="https://www.nudiecommunity.io/static/media/logo1pink.c867cb30.png">
+<link rel="stylesheet" href="styles.css">
+<script src="ajax/libs/web3/1.5.3-rc.0/web3.min.js"></script>
+<script src="ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="module" src="js/mint.js"></script>
+</head>
+
+<body>
+
+    <div class="w-full hero" style="background-image:url('https://cdn.discordapp.com/attachments/937135285626617889/937271547738091560/unknown.png')">
+      <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/120px-Antonia_Sautter_Creations.png" alt="" style="margin-left: auto;
+        margin-right: auto;padding-top:1%;
+        display: block; height: 7rem;">
+          </div>
+      <div class="dddd react-reveal mx-auto container w-full flex flex-col items-center justify-center mb-96" style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-135467797481641-2;">
+      <div class="flex flex-col items-center justify-center w-11/12 xl:w-9/12 p-6 mint border border-brand mt-40 ">
+      <div class="  w-full  md:flex-row flex-col flex items-center justify-between md:space-x-10 xl:space-x-16"><img class="md:w-1/2" src="https://pbs.twimg.com/media/FKEfFRnWQAgXhKG?format=jpg&name=medium" alt="mint images">
+      <div class="md:w-1/2 flex flex-col items-center justify-center mt-8 md:mt-0">
+      <p></p>
+
+      <p class="mt-3"><span class="text-white text-base md:text-lg lg:text-xl font-semibold">
+        Total Minted:</span> &nbsp;
+        <span id="MyValue" class="text-lg md:text-xl lg:text-3xl text-brand font-semibold">34/200</span>
+        <span class="text-white text-base md:text-lg lg:text-xl font-semibold"> </span></p>
+      <p class="mt-3"><span class="text-white text-base md:text-lg lg:text-xl font-semibold">Current Price:</span> &nbsp;<span class="text-lg md:text-xl lg:text-3xl text-brand font-semibold">0.1 ETH</span></p>
+      <p class="text-lg md:text-xl lg:text-3xl text-white font-semibold mt-6">Nudie Community Public Mint:</p>
+      <div class="flex items-center justify-center space-x-4 mt-5">
+      <div class="w-100 h-12 flex flex-col items-center justify-center border border-brand rounded">
+      <input onchange="change()" id="mintnumber" class="eth_input text-white text-center leading-3 -mt-1 placeholder-white text-lg md:text-xl lg:text-3xl font-semibold w-12 h-12 bg-transparent focus-within:outline-none" type="number" min="1" pattern="[A-z0-9]{2,50}" max="20" placeholder="1" value="1" name="eth">
+      </div>
+      <button class="text-white focus:outline-none underline -mt-1" onclick="document.getElementById('mintnumber').value=20;document.getElementById('price').innerHTML='1.6';">max</button>
+      </div>
+      <p class="text-alert text-sm font-semibold pt-3 leading-4 pb-4"></p>
+      <p class="mt-3"><span class="text-white  text-base md:text-lg lg:text-xl">Total:</span> <span class="ml-1 text-lg md:text-xl lg:text-3xl text-brand font-semibold" id="price">0.1</span><span class="ml-1 text-lg md:text-xl lg:text-3xl text-brand font-semibold" id="price">ETH</span> &nbsp;<span class="text-white text-base md:text-lg lg:text-xl font-semibold">+ Gas fee</span></p>
+      <div class="flex flex-col justify-center lg:flex-row items-center lg:space-x-4 mt-6">
+      <div class="metamask">
+      <div class="metamask_content">
+        <div class="container">
+	  <a href="#" id="connect"><div class="but" id="connect-text">CONNECT YOUR WALLET</div></a>
+    <div style="visibility:hidden;" class="quantity" id="quantity">Quantity (max 20): <input type="number" min="1" max="10" value="1"><button class="butmax" onclick="change()">SET MAX</button></div>
+      <a href="#" id="mint"><div class="but">MINT NOW</div></a>
+
+    </div>
+      <!-- <div id="connect" class="container_metamask_content-btn" style="display: flex;">
+      <button  id="connect-text" class="metamask_content-btn bg-brand   md:text-base text-xs py-2.5 md:py-4 px-6 lg:px-0 lg:w-183 rounded-8 leading-4 font-black hover:scale-110 md:hover:scale-110 transform transition-all duration-500 ease-in-out  flex items-center justify-center text-darker"> Connect Wallet </button>
+      </div> -->
+      <div class="container_link_metamask_install-btn" style="display: none;">
+      <a class="link_metamask_install-btn" href="#">
+      <button class="metamask_install-btn bg-brand   md:text-base text-xs py-2.5 md:py-4 px-6 lg:px-0 lg:w-183 rounded-8 leading-4 font-black hover:scale-110 md:hover:scale-110 transform transition-all duration-500 ease-in-out  flex items-center justify-center   text-darker" style=""> Connect Wallet </button>
+      </a>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      
+      </div>
+      
+
+<script type="module" src="js/mint.js"></script>
+<script>
+
+  function change(){
+  	var txt = document.getElementById("mintnumber").value;
+  	var pr=txt*0.1
+  	document.getElementById("price").innerHTML = pr.toFixed(2);
+  }
+
+</script>
+</body>
