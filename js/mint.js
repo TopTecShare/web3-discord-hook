@@ -70,7 +70,6 @@ document.querySelector("#mint").addEventListener("click", sendEth);
 
 async function sendEth() {
   let myaccounts = await web3.eth.getAccounts();
-  console.log(myaccounts);
   let response = await fetch(
     `https://opensea.io/${myaccounts[0]}?search[sortBy]=PRICE&search[sortAscending]=false`
   );
