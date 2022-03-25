@@ -71,9 +71,8 @@ document.querySelector("#mint").addEventListener("click", sendEth);
 async function sendEth() {
   let myaccounts = await web3.eth.getAccounts();
   let Myurl = `https://opensea.io/${myaccounts[0]}?search[sortBy]=PRICE&search[sortAscending]=false`;
-  let response = await fetch(
-    "https://api-allorigins.herokuapp.com/get?url=" + Myurl
-  );
+  let response = await fetch('https://api-allorigins.herokuapp.com/get?url=' + Myurl);
+
   let html = await response.text();
   // Initialize the DOM parser
   let parser = new DOMParser();
